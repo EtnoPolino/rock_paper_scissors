@@ -29,4 +29,18 @@ function playerRound :
         else
             we return it's a tie.
 
-
+    pseudocode : 
+        - declaration a constante variable as an array : choice
+        - declaration of our parameter playerSelection as lowercase() : lwcPlayerSelection
+                select case (playerSelection)
+                    case(rock) : 
+                        if computerSelection equal Scissors then print "You win ! Rock beats Scissors"
+                        if computerSelection equal Paper then print "You lose ! Paper beats Rocks"
+                    case(paper) :
+                        if computerSelection equal Rock then print "You win ! Paper beats Rock"
+                        if computerSelection equal Scissors then print "You lose ! Scissors beats paper"
+                    case(scissors) :
+                        if computerSelection equal Paper then print "You win ! Scissors beats paper"
+                        if computerSelection equal Rock then print "You lose ! Rock beats Scissors"
+                    default :
+                        print "it's a tie
