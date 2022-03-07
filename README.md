@@ -44,3 +44,29 @@ function playerRound :
                         if computerSelection equal Rock then print "You lose ! Rock beats Scissors"
                     default :
                         print "it's a tie
+
+function game() :
+    plan : 
+        Counting the number of game we did from 5 games in total,
+        for each game played we will register in a array if we win, lose or tie
+        then we will comare le length of these win, lose, tie array to determine who won the five games
+            the one with the most length higher than the rest will determine who won.
+
+
+    pseudocode :
+        - declaration array number of games : "play"
+        - declaration array of wins : "win"
+        - declaration array of lose : "lose"
+        - declaration array of tie : "tie"
+
+        for i from 0 to 5 then
+            - declaration the constant of computerplay
+            - play the game with function playerRound
+                if play contains the word "you win" then array win take value
+                if play contains the word "you lose" then array lose take value
+                if play contains the word "tie" then array tie take value
+
+        if length(win) > length(lose) and length(win) > length(tie) then "you won the game"
+        if length(lose) > length(win) and length(lose) > length(tie) then "you lost the game"
+        if length(tie) > length(win) and length(tie) > length(lose) then "it's a tie.. no one won"
+
