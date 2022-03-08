@@ -40,48 +40,45 @@ function playRound(playerSelection, computerSelection){
 
 function game(){
     const play = [];  // the number of game played
-    const win = []; // count of the number of win
-    const lose = []; // count of the number of win
-    const tie = []; // count of the number of win
+    let scoreComputer = 0, scoreTie = 0, scoreUser = 0;
+
 
  /* doing the numbers of games */
-    for (let i = 0; i < 3; i++){
+    for (let i = 0; i < 5; i++){
         const computerSelection = computerplay();
         play[i] = playRound("SCISSORS", computerSelection);
-        
-            if(play[i].includes("You win")){
-                win[i] = true;           
-            } else if (play[i].includes("You lose")){
-                lose[i] = true;
-            } else {
-                tie[i] = true;
-            }
+
+        if (play[i].includes("You win")){
+            scoreUser = scoreUser + 1;
+            console.log(play[i]); 
+        } else if (play[i].includes("You lose")){
+            scoreComputer = scoreComputer +1;
+            console.log(play[i]);
+        }else{
+            scoreTie = scoreTie + 1;
+            console.log(play[i]); 
+        }        
     }
-
-    console.log(play);
-    console.log("-------");
-    console.log(win);
-
+    console.log("---------------------------------");
+    if (scoreComputer > scoreUser){
+        console.log(`${scoreUser} good answers against ${scoreComputer} for the computer : you lost the game`);
+    } else if (scoreComputer < scoreUser){
+        console.log(`${scoreUser} good answers against ${scoreComputer} for the computer : you won the game`);
+    } else {
+        console.log("it is a tie... whatever");
+    }
  /* now we create array from win, lose, tie with non empty index.. Use of the function filter()*/
-   const fil_win = win.filter(Boolean);
+/*   const fil_win = win.filter(Boolean);
    const fil_lose = lose.filter(Boolean);
    const fil_tie = tie.filter(Boolean);
 
-    console.log("--without empty index---");
-    console.log(win.filter(Boolean));
-    console.log(lose.filter(Boolean));
-    console.log(tie.filter(Boolean));
-
     if(fil_win.length > fil_lose.length){
-       /* return "You won the game"; */
-       console.log("You won the game");
+        return "You won the game"; 
     } else if (fil_lose.length > fil_win.length){
-      /*  return "You lost the game"; */
-      console.log("You lost the game");
+        return "You lost the game";
     } else {
-        console.log("it's a tie.. no one won");
-    }
+        return "it's a tie.. no one won";
+    }*/
 }
-
 
 game();
