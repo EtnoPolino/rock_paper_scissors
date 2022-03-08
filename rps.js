@@ -42,11 +42,12 @@ function game(){
     const play = [];  // the number of game played
     let scoreComputer = 0, scoreTie = 0, scoreUser = 0;
 
-
  /* doing the numbers of games */
     for (let i = 0; i < 5; i++){
         const computerSelection = computerplay();
-        play[i] = playRound("SCISSORS", computerSelection);
+        const entryUser = String(prompt("Entrez rock, paper or scissors...", ""));
+
+        play[i] = playRound(entryUser, computerSelection);
 
         if (play[i].includes("You win")){
             scoreUser = scoreUser + 1;
@@ -67,18 +68,6 @@ function game(){
     } else {
         console.log("it is a tie... whatever");
     }
- /* now we create array from win, lose, tie with non empty index.. Use of the function filter()*/
-/*   const fil_win = win.filter(Boolean);
-   const fil_lose = lose.filter(Boolean);
-   const fil_tie = tie.filter(Boolean);
-
-    if(fil_win.length > fil_lose.length){
-        return "You won the game"; 
-    } else if (fil_lose.length > fil_win.length){
-        return "You lost the game";
-    } else {
-        return "it's a tie.. no one won";
-    }*/
 }
 
 game();
