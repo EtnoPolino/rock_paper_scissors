@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/42b75604f0.js" crossorigin="anonymous"></script>
+    <script src = "rps.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    
-    <script src = "rps.js"></script>
+    <main>
+        <section id="left-side">
+            <ul class="top-left">
+                <li><button id="rock"><i class="fa-solid fa-hand-back-fist"></i></button></li>
+                <li><button id="paper"><i class="fa-solid fa-scroll"></i></button></li>
+            </ul>
+            
+            <div class="middle-left">
+                <button id="scissor"><i class="fa-solid fa-hand-scissors"></i></button>
+            </div>
+            
+            <p id="result-game">test..</p>
+        </section>
+
+        <section id="right-side">
+            <h2>score</h2>
+
+            <ul class="top-right">
+                <li>Computer : <span id="score-computer">0</span></li>
+                <li>Player : <span id="score-player">0</span></li>
+            </ul>
+
+            <p id="resultat-finale">test...</p>
+
+            <div class="bottom-right">
+                <Button id="button-reset">Reset</Button>
+            </div>
+        </section>
+    </main>
 </body>
-</html>
+
+<!--
+    
+    <Button id="button-reset" disabled >Reset</Button>
+-->

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+    --veryDarkCyan : hsl(183, 100%, 15%);
+    --lightGrayishCyan : hsl(185, 41%, 84%);
+    --StrongCyan : hsl(172, 67%, 45%);
+    --White : hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Space Mono', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightGrayishCyan);
+}
+
+main{
+    background-color: var(--White);
+    width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+    border-radius: 20px;
+    gap: 2rem;
+}
+
+main #left-side,
+main #right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+main #left-side ul,
+main #right-side ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+
+main #left-side .middle-left,
+main #right-side .bottom-right{
+    display: flex;
+    justify-content: center;
+}
+
+main #left-side button{
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color:var(--lightGrayishCyan);
+}
+
+
+
+
+/************** droite *****************/
+main #right-side{
+    background-color: var(--veryDarkCyan);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+main #right-side h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--White);
+}
+
+main #right-side ul{
+    color: var(--StrongCyan);
+}
+
+main #right-side button{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color:var(--lightGrayishCyan);
+    padding: 5px 10px;
+}
+
+p{
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+i{
+    width: 32px;
+    aspect-ratio: 1/1;
+    pointer-events: none;
+}

@@ -1,4 +1,20 @@
+const buttons = document.querySelectorAll('button');
 
+buttons.forEach(button => {
+    button.addEventListener('click', test)
+})                       
+
+function test(e){
+    if(e.target.id == "rock"){
+        console.log('Affiche Rock')
+    } else if(e.target.id == "paper") {
+        console.log('Affiche papers')
+    }else if(e.target.id == "scissor"){
+        console.log('Affiche scixeau')
+    }
+}
+
+/*
 function computerplay(){
     const computeChoice = ["Rock", "Paper", "Scissors"];
     const randomIndex = Math.floor(Math.random()*computeChoice.length);
@@ -36,13 +52,14 @@ function playRound(playerSelection, computerSelection){
             }
     }
 }
+*/
 
-
+/*
 function game(){
     const play = [];  // the number of game played
     let scoreComputer = 0, scoreTie = 0, scoreUser = 0;
 
- /* doing the numbers of games */
+ // doing the numbers of games 
     for (let i = 0; i < 5; i++){
         const computerSelection = computerplay();
         const entryUser = String(prompt("Entrez rock, paper or scissors...", ""));
@@ -70,4 +87,5 @@ function game(){
     }
 }
 
-game();
+
+game();*/
