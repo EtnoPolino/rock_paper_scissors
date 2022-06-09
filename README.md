@@ -15,5 +15,5 @@ The winner of the game once one player reaches 5 points then we will disable the
 
 ### Links
 
-- Solution URL : [code]( )
-- Live Site URL : [demo]( )
+- Solution URL : [code](https://github.com/EtnoPolino/rock_paper_scissors.git)
+- Live Site URL : [demo](https://etnopolino.github.io/rock_paper_scissors/)
